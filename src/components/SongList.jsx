@@ -12,9 +12,9 @@ const SongList = ({ dispatch, songList }) => {
         let song = songList[songId];
         return <li key = {songId} onClick = {() => {
           if (song.arrayPosition > 0){
-            dispatch(restartSong(id));
+            dispatch(restartSong(songId));
           }
-          dispatch(changeSong(id));
+          dispatch(changeSong(songId));
         }}>
           {song.title} by {song.artist}</li>;
       })}
